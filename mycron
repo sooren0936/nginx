@@ -1,7 +1,0 @@
-* * * * * root echo "hello world!" > /dev/null 2>&1
-* * * * * /bin/echo "cron works" > /dev/null 2>&1
-* * * * * /home/suren/repos/NGINX/job_logs.sh > /dev/null 2>&1
-* * * * * echo hello > /tmp/hello
-
-* * * * * /home/suren/repos/NGINX/job_logs.sh > /dev/null
-* * * * * /home/suren/repos/NGINX/job_logs.sh > /dev/null 2>&1

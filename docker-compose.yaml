@@ -2,22 +2,9 @@ version: '3.4'
 
 services:
   web:
-    image: nginx
+    build: .
     ports:
       - 8080:80
     volumes:
-      - ./rotate.sh:/rotate.sh
-      - ./job_logs.sh:/job_logs.sh
-      #      - ./nginx/local.conf:/etc/nginx/nginx.conf
-      - ./data/images:/data/images/
+      - ./nginx/local.conf:/etc/nginx/nginx.conf
       - ./data/www:/data/www/
-      - ./data/logs:/var/log/nginx/
-    tty: true
-    command: >
-      tail -f /dev/null
-
-#       && /rotate.sh"
-
-#    entrypoint:
-#      - /bin/sh
-#      - /rotate.sh
